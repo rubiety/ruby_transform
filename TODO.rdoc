@@ -1,0 +1,4 @@
+= TODO
+
+* Eventually going to need some similar concept of "checks" like exist in rails_best_practices.
+* What about transforms that work across files?  For example complex view snippets that can automatically be refactored to helpers.
