@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 transformer = RubyTransform::Transformers::Custom.new do |expression|
   if sexp?(expression) && expression.kind == :str
