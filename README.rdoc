@@ -1,0 +1,21 @@
+= Ruby Transform
+
+== Introduction
+
+Provides a series of s-expression transformations useful for automatic refactoring or morphing of Ruby/Rails/Sinatra code.
+
+== Example
+
+This is just one of many examples:
+
+= Block Method To Proc Transform
+Looks for cases where we're calling a single method on a single-parameter block argument.
+These instances can use the Ruby 1.9 and ActiveSupport "Symbol#to_proc" trick.
+
+Example:
+
+  collection.map {|d| d.name }
+
+Transforms To:
+  
+  collect.map(&:name)
