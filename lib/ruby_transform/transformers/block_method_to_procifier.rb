@@ -12,7 +12,7 @@ module RubyTransform
     # Transforms To:
     #   
     #   collect.map(&:name)
-    #    
+    # 
     class BlockMethodToProcifier < Transformer
       def transform(e)
         super transform_block_methods_to_proc(e)
@@ -29,9 +29,9 @@ module RubyTransform
       def matches_block_to_use_tap?(e)
         e.kind == :iter &&  # Calls block
         e.body[2] && e.body[2].kind == :call &&  # Body of block is a simple method call
-        e.body[2].body[0].kind == :lvar &&  # Simple method call is on a local variable
-        e.body[1].kind == :lasgn &&  # Block parameter is a single assign
-        e.body[2].body[0].body[0] == e.body[1].body[0]  # Local variable is identical to the first block argument
+        e.body[2] && e.body[2].body[0] && e.body[2].body[0].kind == :lvar &&  # Simple method call is on a local variable
+        e.body[1] && e.body[1].kind == :lasgn &&  # Block parameter is a single assign
+        e.body[2] && e.body[2].body[0].body[0] == e.body[1].body[0]  # Local variable is identical to the first block argument
       end
       
       def transform_block_to_use_tap(e)
