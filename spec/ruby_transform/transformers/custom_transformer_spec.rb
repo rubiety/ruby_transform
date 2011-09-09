@@ -4,7 +4,7 @@ transformer = RubyTransform::Transformers::Custom.new do |expression|
   if sexp?(expression) && expression.kind == :str
     s(:str, expression.body[0].reverse)
   else
-    super
+    super(expression)
   end
 end
 

@@ -21,5 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency("ruby_parser", ["~> 2.0.4"])
   s.add_dependency("ruby_scribe", ["~> 0.1.0"])
   s.add_dependency("thor", ["~> 0.13"])
+  s.add_dependency("activesupport", ["~> 3.0.10"])
+  s.add_dependency("i18n", ["~> 0.6.0"])
   s.add_development_dependency("rspec", ["~> 2.0"])
 end
