@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe RubyTransform::Transformers::ClearExplicitReturns.new do
+describe RubyTransform::Transformers::ClearExplicitReturns do
   
   describe "a method with explicit return" do
     subject { %{

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe RubyTransform::Transformers::Eachifier.new do
+describe RubyTransform::Transformers::Eachifier do
   
   describe "a for block" do
     subject { %{

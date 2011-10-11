@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe RubyTransform::Transformers::BlockMethodToProcifier.new do
+describe RubyTransform::Transformers::BlockMethodToProcifier do
   
   describe "a block call with method invocation" do
     subject { %{collection.map {|d| d.name }}}
