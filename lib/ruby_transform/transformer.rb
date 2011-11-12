@@ -1,3 +1,5 @@
+require "ruby_transform/transformer_helpers"
+
 module RubyTransform
   
   # Takes a raw S-expression and transforms it (replaces the node with the return value of the process method).
