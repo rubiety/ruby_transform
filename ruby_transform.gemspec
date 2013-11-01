@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/rubiety/ruby_transform"
   s.summary     = "S-expression transformations for Ruby."
   s.description = "Provides a series of s-expression transformations useful for automatic refactoring or morphing of Ruby/Rails/Sinatra code."
+  s.license     = "MIT"
   
   s.executables = ["rubytransform"]
   s.files        = Dir["{lib,spec}/**/*", "[A-Z]*", "init.rb"]
